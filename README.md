@@ -13,7 +13,7 @@ This method uses 4 concepts to find the centers (it works pretty well for small 
 * availiability (a): Represents how likely the data point i is to choose k as its cluster (representative). It's represented as $a(i,k) = min\{0,r(k,k)+\sum_{i'\ne {i,k}}max(0,r(i',k))), \ i \ne k$
 $a(k,k)=\sum_{i'\ne {k}}max(0,r(i',k)), i = k$
 
-  * When updating $a$ and $r$, a "dumping value" $\lambda$ is chosen manually (0.5 is a common value). This prevents oscillations for each iteration $t$:
+  * When updating $a$ and $r$, a "dumping value" $\lambda$ is chosen manually (0.5 is a common value). This prevents high oscillations for each iteration $t$:
 
   <center>$r(i,k)_{t+1}=(1-\lambda)\cdot r(i,k)_{t+1} + \lambda \cdot r(i,k)_{t}$ </center><br>
   <center>$a(i,k)_{t+1}=(1-\lambda)\cdot a(i,k)_{t+1} + \lambda \cdot a(i,k)_{t}$ </center>
