@@ -18,6 +18,7 @@ $a(k,k)=\sum_{i'\ne {k}}max(0,r(i',k)), i = k$
   <center>$r(i,k)_{t+1}=(1-\lambda)\cdot r(i,k)_{t+1} + \lambda \cdot r(i,k)_{t}$ </center>
  <br>
   <center>$a(i,k)_{t+1}=(1-\lambda)\cdot a(i,k)_{t+1} + \lambda \cdot a(i,k)_{t}$ </center>
+  
 * criterion: it represents the sum of $r(i,k)$ and $a(i,k)$ for all $i,k$. The highest value for each row represents the cluster of that row.
 
 The algorithm starts by calculating the ``distance_matrix``, starting the matrix for $a$ and $r$ on zero, and choosing a $\lambda$. Then the responsibility is calculated for all $i,j$, then the ``update formula`` is used. Afterwards, availibility is calculated and updated. Finally, the ``criterion matrix`` is found.
