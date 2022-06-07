@@ -2,7 +2,7 @@
 
 This clustering method is like ``hierarchical clustering`` in the sense that you don't have to know the number of clusters beforehand. The main difference is that ``AP Clustering`` tries to find the clusters centers without having to use a dendrogram.
 
-This method uses 4 concepts to find the centers (it works pretty well for small datasets since all the matrices are $(n,n)$:
+This method uses 4 concepts to find the centers (it works pretty well for small datasets since all the matrices are $(n,n)$):
 
 * similarity (s): Represents the negative euclidean distance between all the data points (distance matrix).
 
