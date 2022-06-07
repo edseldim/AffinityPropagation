@@ -10,7 +10,7 @@ This method uses 4 concepts to find the centers (it works pretty well for small 
 
 * responsability (r): Represents how much influence a cluster k has on a data point i. It's represented as $r(i,k)=s(i,k) - max_{k' \ne k}(a(i,k')-s(i,k'))$
 
-* availiability (a): Represents how likely the data point i is to choose k as its cluster (representative). It's represented as $a(i,k) = min\{0,r(k,k)+\sum_{i'\ne {i,k}}max(0,r(i',k))), \ i \ne k$
+* availability (a): Represents how likely the data point i is to choose k as its cluster (representative). It's represented as $a(i,k) = min\{0,r(k,k)+\sum_{i'\ne {i,k}}max(0,r(i',k))), \ i \ne k$
 $a(k,k)=\sum_{i'\ne {k}}max(0,r(i',k)), i = k$
 
   * When updating $a$ and $r$, a "dumping value" $\lambda$ is chosen manually (0.5 is a common value). This prevents high oscillations for each iteration $t$:
@@ -20,6 +20,6 @@ $a(k,k)=\sum_{i'\ne {k}}max(0,r(i',k)), i = k$
   
 * criterion: it represents the sum of $r(i,k)$ and $a(i,k)$ for all $i,k$. The highest value for each row represents the cluster of that row.
 
-The algorithm starts by calculating the ``distance_matrix``, starting the matrix for $a$ and $r$ on zero, and choosing a $\lambda$. Then the responsibility is calculated for all $i,j$, then the ``update formula`` is used. Afterwards, availibility is calculated and updated. Finally, the ``criterion matrix`` is found.
+The algorithm starts by calculating the ``distance_matrix``, starting the matrix for $a$ and $r$ on zero, and choosing a $\lambda$. Then the responsibility is calculated for all $i,j$, then the ``update formula`` is used. Afterwards, availability is calculated and updated. Finally, the ``criterion matrix`` is found.
 
 These steps are performed as many times as necessary.
