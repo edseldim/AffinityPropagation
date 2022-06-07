@@ -6,7 +6,7 @@ This method uses 4 concepts to find the centers (it works pretty well for small 
 
 * similarity (s): Represents the negative euclidean distance between all the data points (distance matrix).
 
-  * For all $i = j$, a value is set manually for all $i,j$. This is called "the preference". The higher it is, the more clusters we will end up having, and the smaller it is, the fewer clusters we will end up having.
+  * For all $i = j$, a value is set manually. This is called "the preference". The higher it is, the more clusters we will end up having, and the smaller it is, the fewer clusters we will end up having.
 
 * responsability (r): Represents how much influence a cluster k has on a data point i. It's represented as $r(i,k)=s(i,k) - max_{k' \ne k}(a(i,k')-s(i,k'))$
 
